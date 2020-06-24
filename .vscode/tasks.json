@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "gcc build active file",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-iquote${workspaceRoot}/include",
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-pedantic",
+                "-g",
+                // "-DDEBUG_MALLOC",
+				// "-DDEBUG_MPC",
+				// "-DDEBUG_HMAP",
+                "-DVALGRIND",
+                // "-O0",
+                "-msse2",
+                "-msse4",
+                "-march=native",
+                // "-mpopcnt",
+                // "-Og",
+                "-O3",
+                "-ftree-vectorize",
+                "-fopt-info-vec-optimized",
+                // "-fopt-info-vec-all",
+                "${file}",
+                // "${workspaceRoot}/src/mpc.c",
+                // "${workspaceRoot}/src/linenoise.c",
+                // "${workspaceRoot}/src/hash_murmur3_nose.c",
+                // "-ledit", // editline lib
+                "-lm", // link math lib
+                // "-lbsd",
+                "-o",
+                // "${fileDirname}/../bin/${fileBasenameNoExtension}"
+                "${workspaceRoot}/bin/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
