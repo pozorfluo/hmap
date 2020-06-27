@@ -3,7 +3,7 @@ SOURCEDIR = ./src
 BINARYDIR = ./bin
 TESTSDIR = ./tests
 
-EXCLUDE = hashmap.c
+# EXCLUDE = hashmap.c
 
 IFLAGS = -iquote$(HEADERDIR)
 CFLAGS = -Wall -Wextra -Werror -pedantic -g #-fsanitize=address -static-libasan

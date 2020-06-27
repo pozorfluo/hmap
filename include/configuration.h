@@ -14,6 +14,21 @@
 	    " type exit to quit\n" RESET FG_BRIGHT_RED REVERSE                     \
 	    "\t todo \n" RESET FG_BRIGHT_RED                                       \
 	    "\t- [ ] Wrap up a version satisfying build-your-own-lisp use case\n"  \
+	    "\t\t+ [ ] Implement <string => int>\n"                                \
+	    "\t\t\t* [ ] Test\n"                                                   \
+	    "\t\t\t* [ ] Bench different hash function\n"                          \
+	    "\t\t+ [ ] Implement <string => pointer>\n"                            \
+	    "\t\t\t* [ ] Test\n"                                                   \
+	    "\t\t\t* [ ] Bench different hash function\n"                          \
+	    "\t\t+ [ ] Implement <string => function pointer>\n"                   \
+	    "\t\t\t* [ ] Test\n"                                                   \
+	    "\t\t\t* [ ] Bench different hash function\n"                          \
+	    "\t- [ ] Move on to next build your own lisp step\n"                   \
+	    "\t\t+ [x] Implement remove for bucket aos\n" RESET FG_BRIGHT_YELLOW   \
+	    "\t- [ ] Consider explicitely filling padding in map struct with a "   \
+	    "union of interesting extras metadata depending on types/use of "      \
+	    "hmap\n"                                                               \
+	    "\t\t+ [ ] See PHPs-new-hashtable-implementation.html\n"                \
 	    "\t- [ ] Bench other types of KVP\n"                                   \
 	    "\t- [ ] Bench murmur, reduce fibo, tab_hash\n"                        \
 	    "\t- [ ] Investigate how hmap_bucket_aos fails at load_factor=1\n"     \
@@ -25,7 +40,6 @@
 	    "\t- [ ] Compare to alternative implementation\n"                      \
 	    "\t\t+ [x] Try separate meta array, aos bucket\n"                      \
 	    "\t\t+ [x] Try SIMD probe without TLF slingshots\n"                    \
-	    "\t\t+ [x] Implement remove for bucket aos\n" RESET FG_BRIGHT_YELLOW   \
 	    "\t- [ ] Consider adding a cursor for store iteration\n"               \
 	    "\t- [x] Wrap hmap interface with an opaque pointer to an incomplete " \
 	    "type \n"                                                              \
